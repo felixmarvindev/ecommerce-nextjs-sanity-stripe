@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn, formatPrice } from "@/lib/utils";
 import type { FILTER_PRODUCTS_BY_NAME_QUERYResult } from "@/sanity.types";
 import { AddToCartButton } from "./AddToCartButton";
+import { StockBadge } from "./StockBadge";
 
 type Product = FILTER_PRODUCTS_BY_NAME_QUERYResult[number];
 
@@ -125,6 +126,7 @@ export function ProductCard({ product }: ProductCardProps) {
             {formatPrice(product.price)}
           </p>
           {/* Stock Badge */}
+          <StockBadge productId={product._id} stock={stock} />
         </div>
       </CardContent>
 
