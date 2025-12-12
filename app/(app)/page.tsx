@@ -10,6 +10,7 @@ import {
 import { ALL_CATEGORIES_QUERY } from "@/lib/sanity/queries/categories";
 import { FeaturedCarousel } from "@/components/app/FeaturedCarousel";
 import { FeaturedCarouselSkeleton } from "@/components/app/FeaturedCarouselSkeleton";
+import { CategoryTiles } from "@/components/app/CategoryTiles";
 
 interface PageProps {
   searchParams: Promise<{
@@ -101,7 +102,7 @@ export default async function HomePage({ searchParams }: PageProps) {
 
         {/* Category Tiles - Full width */}
         <div className="mt-6">
-          {/* <CategoryTiles/> */}
+          <CategoryTiles categories={categories} activeCategory={categorySlug} />
         </div>
       </div>
 
