@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn, formatPrice } from "@/lib/utils";
 import type { FILTER_PRODUCTS_BY_NAME_QUERYResult } from "@/sanity.types";
+import { AddToCartButton } from "./AddToCartButton";
 
 type Product = FILTER_PRODUCTS_BY_NAME_QUERYResult[number];
 
@@ -128,7 +129,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </CardContent>
 
       <CardFooter className="mt-auto p-5 pt-0">
-        {/* Add to Cart Button */}
+        <AddToCartButton productId={product._id} name={product.name ?? "Unknown Product"} price={product.price ?? 0} image={mainImageUrl ?? undefined} stock={stock} />
       </CardFooter>
     </Card>
   );
