@@ -18,8 +18,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  manifest: "/manifest.json",
-  themeColor: "#000000",
   viewport: {
     width: "device-width",
     initialScale: 1,
