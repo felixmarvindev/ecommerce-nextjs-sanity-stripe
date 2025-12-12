@@ -17,13 +17,7 @@ export const metadata: Metadata = {
   description: "Ecommerce NextJS Sanity Stripe",
   icons: {
     icon: "/favicon.ico",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+  }
 };
 
 export default function RootLayout({
